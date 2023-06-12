@@ -480,9 +480,11 @@ categories.forEach(btn => {
 
             const btnProduct = arrayProducts.filter((product) => product.category.id === e.currentTarget.id);
             loadproducts(btnProduct);
+            localStorage.setItem("value-links-products", e.currentTarget.id);
         } else{
             title_products.innerText = "todos los productos";
             loadproducts(arrayProducts);
+            localStorage.setItem("value-links-products", "todos");
         };
 
     });
