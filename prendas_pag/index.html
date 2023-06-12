@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quinson - ropa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="logo_container">
+            <a class="logo_link" href="/index.html" target="_self">
+                <img src="imagenes/logo_img.png" class="logo_img" alt="">
+                <h1 class="logo_text">quinson</h1>
+            </a>
+        </div>
+        <div class="seach_container">
+            <!-- <div class="search_bar"> -->
+            <form class="search_bar" id="formProducts">
+                <input class="input_seach" type="text">
+                <button class="btn_search"><i class="bi bi-search-heart-fill seacrh"></i></button>
+            </form>
+            <!-- </div> -->
+
+            <div class="icons_navbar">
+                <i class="bi bi-list list" id="list"></i>
+                <i class="bi bi-cart-plus cart" id="cart"></i>
+            </div>
+
+            <nav class="nav" id="navbar_list">
+                <button class="btn_close" id="btn_close"><i class="bi bi-x-lg close"></i></button>
+                <button id="todos" class="btn_navbar">todos los productos</button>
+                <button id="remeras" class="btn_navbar">remeras</button>
+                <button id="buzos" class="btn_navbar">buzos</button>
+                <button id="pantalones" class="btn_navbar">pantalones</button>
+            </nav>
+
+            <div class="navbar_cart_container">
+                <div class="cart_navbar" id="navbar_cart">
+                    <div class="cart_top">
+                        <div class="count_container">
+                            <h2 class="count_title">MI CARRITO <span class="counter">0</span></h2>
+                            <i class="bi bi-x-lg close_cart"></i>
+                        </div>
+                        <div class="cart_empty">
+                            <p class="empty_paragraph">No hay productos en tu carrito de compras. <i class="bi bi-heartbreak-fill"></i></p>
+                        </div>
+                    </div>
+
+                    <div class="cart_center display_none">
+                        <h2 class="cart_title"><span class="counter2">0</span> articulos en el carrito</h2>
+                        <!-- productos incluidos desde el javascript-->
+                    </div>
+
+                    <div class="cart_bottom">
+                        <div class="discounts_container">
+                            <img src="imagenes/visa_icon.png" alt="visa">
+                            <p class="discount_paragraph"><span class="color_black">6 cuotas sin interés</span> con el plan ahora 12.</p>
+                        </div>
+                        <div class="buy_cart display_none">
+                            <div class="cart_actions_total">
+                                <p>subtotal:</p>
+                                <p id="price_total"></p>
+                            </div>
+                            <button class="cart_actions_buy"><a class="cart_buy_link" href="#">comprar</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="content_container">
+        <h2 class="title_content">todos los productos</h2>
+        <div class="products_container" id="slider">
+            <!-- productos incluidos desde el javascript-->
+        </div>
+        <div class="resultEmpy display_none">
+            <i class="bi bi-cart-x cartEmpty"></i>
+            <h2>sin resultados de busqueda</h2>
+            <p class="resultText"></p>
+        </div>
+    </section>
+
+    <script src="clothes.js"></script>
+</body>
+</html>
