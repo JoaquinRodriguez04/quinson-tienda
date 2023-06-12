@@ -597,7 +597,7 @@ function añadirProductosAlLateral(){
     reloadTotal();
 };
 
-añadirProductosAlLateral();
+// añadirProductosAlLateral();
 
 function updateRemoveProduct(){
     cart_product_delete = document.querySelectorAll(".cart_product_delete");
