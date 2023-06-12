@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local fisico - quinson</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <header class="hero">
+        <div class="logo_container">
+            <a class="logo_link">
+                <img src="local_images/logo_img.png" class="logo_img" alt="">
+                <h1 class="logo_text">Joaquin's outfit</h1>
+            </a>
+        </div>
+        <div class="seach_container">
+            <div class="search_bar">
+                <input class="input_seach" type="text">
+                <button class="btn_search"><i class="bi bi-search-heart-fill seacrh"></i></button>
+            </div>
+
+            <i class="bi bi-list list" id="list"></i>
+
+            <div class="navbar_container" id="navbar_container">
+                <nav class="nav">
+                    <button class="btn_close" id="btn_close"><i class="bi bi-x-lg close"></i></button>
+                    <button class="btn_navbar active"><a href="#">todos los productos</a></button>
+                    <button class="btn_navbar"><a href="#">sudaderas</a></button>
+                    <button class="btn_navbar"><a href="#">buzos</a></button>
+                    <button class="btn_navbar"><a href="#">pantalones</a></button>
+                    <button class="btn_navbar"><a href="#">abrigos</a></button>
+                    <a class="btn_carrito" href="carrito/index.html"><i class="bi bi-cart-plus-fill"></i> carrito <span class="counter">0</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="local_container">
+        <h2 class="title_local">local fisico<i class="bi bi-arrow-down-short"></i></h2>
+        <a href=""><div class="img_local"></div></a>
+        <div class="address_container">
+            <div class="local_address">
+                <p class="title_address"><i class="bi bi-geo-alt-fill icon_address"></i>Tigre Centro, Buenos Aires.</p>
+                <p class="hours_address"><i class="bi bi-clock-fill icon_address"></i>horario: todos los dias, de 11hs a 21:30hs.</p>
+                <p class="phone_address"><i class="bi bi-telephone-fill icon_address"></i>telefono: 11325465</p>
+            </div>
+            <div class="warning_address">
+                <h2 class="warning_title">proximamente habra mas locales...</h2>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_top">
+
+            <div class="contact_container">
+                <div class="contact_box border_top">
+                    <h3 class="title_ctn">AYUDA</h3>
+                    <p>Terminos y condiciones</p>
+                    <p>Politica de envios</p>
+                    <p>Cambio y Reintegro</p>
+                </div>
+                <div class="contact_box border_center">
+                    <h3 class="title_ctn">SERVICIO AL CLIENTE</h3>
+                    <p>Contactanos</p>
+                    <p>Estado de mi pedido</p>
+                    <p>Escribinos por WhatsApp</p>
+                </div>
+                <div class="contact_box border_bottom">
+                    <h3 class="title_ctn">MI CUENTA</h3>
+                    <p>suscribite</p>
+                    <p>Iniciá sesión</p>
+                    <p>deseos</p>
+                </div>
+            </div>
+
+            <div class="social_container">
+                <h3 class="title_social">seguinos</h3>
+                <div class="social_networks">
+                   <img src="imagenes/whatsapp_icon.png" alt="">
+                   <img src="imagenes/instagram_icon.png" alt="">
+                   <img src="imagenes/tik-tok_icon.png" alt="">
+                </div>
+                
+                <div class="suscribe_container">
+                    <h2 class="title_suscribe">suscribite a quinson</h2>
+                    <div class="btn_suscribe">
+                        <input type="text" placeholder="correo electronico">
+                        <button>enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <img class="img_footer" src="imagenes/logopersonal(01).png" alt="">
+        </div>
+
+    </footer>
+    <script src="local.js"></script>
+</body>
+</html>
