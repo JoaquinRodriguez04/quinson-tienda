@@ -19,11 +19,12 @@ let price_total = document.querySelector("#price_total");
 let cart_product_delete = document.querySelector(".cart_product_delete");
 const icons_navbar = document.querySelector(".icons_navbar");
 const formProducts = document.querySelector("#formProducts");
-let resultSearchProduct = document.querySelector(".input_seach");
+let resultSearchProduct = document.querySelector(".input_search");
 let product_js = document.querySelector(".product_js");
 let resultadoVacio = document.querySelector(".resultadoVacio");
 let resultText = document.querySelector(".resultText");
 let linksClothes = document.querySelectorAll(".linksClothes");
+const search_bar = document.querySelector(".search_bar");
 
 // funciones
 
@@ -70,7 +71,7 @@ function añadirProductosAlLateral(){
                 </div>
 
             <div class="cart_product_interactive">
-                <button class="cart_product_delete" id="${product.id}"><i class="bi bi-trash3-fill"></i></button>
+                <button class="cart_product_delete" id="${product.id}"><i class="bi bi-trash3-fill delete"></i></button>
                 <p class="product_price">$${product.price}</p>
             </div>
             `;
