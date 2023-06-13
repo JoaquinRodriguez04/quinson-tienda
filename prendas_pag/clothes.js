@@ -428,12 +428,12 @@ let price_total = document.querySelector("#price_total");
 let cart_product_delete = document.querySelector(".cart_product_delete");
 const icons_navbar = document.querySelector(".icons_navbar");
 const formProducts = document.querySelector("#formProducts");
-let resultSearchProduct = document.querySelector(".input_seach");
+let resultSearchProduct = document.querySelector(".input_search");
 let product_js = document.querySelector(".product_js");
 let resultEmpy = document.querySelector(".resultEmpy");
 let resultText = document.querySelector(".resultText");
 let valueLinksProducuts = localStorage.getItem("value-links-products");
-
+const search_bar = document.querySelector(".search_bar");
 // functions
 
 function loadproducts(chosenProducts) {
@@ -448,7 +448,7 @@ function loadproducts(chosenProducts) {
             <img src="${product.img}" class="img_product" alt="${product.title}">
             <div class="info_product">
                 <h2 class="product_title">${product.title}</h2>
-                <p class="product_price">$${product.price}</p>
+                <p class="product_price">$${product.price} ARS</p>
                 <a class="product_add" id="${product.id}" href="#">agregar</a>
             </div>
     
@@ -581,8 +581,8 @@ function añadirProductosAlLateral(){
             </div>
             
             <div class="cart_product_interactive">
-                <button class="cart_product_delete" id="${product.id}"><i class="bi bi-trash3-fill"></i></button>
-                <p class="product_price">$${product.price}</p>
+                <button class="cart_product_delete" id="${product.id}"><i class="bi bi-trash3-fill delete"></i></button>
+                <p class="product_price">$${product.price} ARS</p>
             </div>
             `;
             cart_center.append(div);
@@ -599,7 +599,7 @@ function añadirProductosAlLateral(){
     reloadTotal();
 };
 
-// añadirProductosAlLateral();
+añadirProductosAlLateral();
 
 function updateRemoveProduct(){
     cart_product_delete = document.querySelectorAll(".cart_product_delete");
@@ -625,7 +625,7 @@ function removeToCart(e){
 
 function reloadTotal(){
     const totalCalculate = productsInCartLS.reduce((acc,product) => acc + (product.price * product.amount),0);
-    price_total.innerText = `$${totalCalculate}.99`;
+    price_total.innerText = `$${totalCalculate} ARS`;
 };
 
 // events
@@ -653,4 +653,12 @@ document.body.addEventListener("click", (e) => {
         navbar_list.classList.remove("active");
         navbar_cart.classList.remove("active");
     };
+});
+
+resultSearchProduct.addEventListener("focus", ()=> {
+    search_bar.classList.add("hover");
+});
+
+resultSearchProduct.addEventListener("blur", ()=> {
+    search_bar.classList.remove("hover");
 });
