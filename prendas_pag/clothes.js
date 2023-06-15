@@ -434,6 +434,7 @@ let resultEmpy = document.querySelector(".resultEmpy");
 let resultText = document.querySelector(".resultText");
 let valueLinksProducuts = localStorage.getItem("value-links-products");
 const search_bar = document.querySelector(".search_bar");
+
 // functions
 
 function loadproducts(chosenProducts) {
@@ -550,6 +551,23 @@ function addToCart(e){
     localStorage.setItem("products-In-Cart", JSON.stringify(productsInCart));
     añadirProductosAlLateral();
     navbar_cart.classList.add("active");
+
+    Toastify({
+        text: "agregado al carrito",
+        duration: 5000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+            background: "#111",
+            color: "#f9f9ff",
+            borderRadius:"5em",
+        },
+        onClick: function(){}
+    }).showToast();
+
 };
 
 function reloadNumberAmount(){
@@ -620,6 +638,22 @@ function removeToCart(e){
     añadirProductosAlLateral();
 
     localStorage.setItem("products-In-Cart", JSON.stringify(productsInCartLS));
+
+    Toastify({
+        text: "se elimino del carrito",
+        duration: 5000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+            background: "#111",
+            color: "#f9f9ff",
+            borderRadius:"5em",
+        },
+        onClick: function(){}
+    }).showToast();
 
 };
 
