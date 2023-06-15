@@ -604,6 +604,8 @@ function añadirProductosAlLateral(){
             </div>
             `;
             cart_center.append(div);
+
+            $(div).hide().fadeIn(500);
         });
 
     }else{
@@ -615,6 +617,7 @@ function añadirProductosAlLateral(){
     reloadNumberAmount();
     updateRemoveProduct();
     reloadTotal();
+    
 };
 
 añadirProductosAlLateral();

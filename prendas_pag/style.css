@@ -320,6 +320,7 @@ input{
 
 .cart_center{
     width: 100%;
+    transition: 3s;
 }
 
 .cart_title{
