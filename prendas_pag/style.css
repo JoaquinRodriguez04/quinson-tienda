@@ -32,9 +32,9 @@
 /* seteando la fuente de familia */
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: var(--col-rgba-4);
+    background-color: var(--col-rgba-3);
     background-image: url(imagenes/img_nav.jpg);
-    background-position: bottom left;
+    background-position: center;
     background-size: contain;
     background-blend-mode: darken;
 }
