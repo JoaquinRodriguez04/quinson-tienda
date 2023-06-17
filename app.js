@@ -25,6 +25,8 @@ let resultadoVacio = document.querySelector(".resultadoVacio");
 let resultText = document.querySelector(".resultText");
 let linksClothes = document.querySelectorAll(".linksClothes");
 const search_bar = document.querySelector(".search_bar");
+let input_search = document.querySelector(".input_search");
+let search = document.querySelector(".search");
 
 // funciones
 
@@ -161,4 +163,14 @@ document.body.addEventListener("click", (e) => {
         navbar_list.classList.remove("active");
         navbar_cart.classList.remove("active");
     };
+});
+
+input_search.addEventListener("mouseover", ()=> {
+    formProducts.classList.add("hover");
+    search.classList.add("hover");
+});
+
+input_search.addEventListener("mouseout", ()=> {
+    formProducts.classList.remove("hover");
+    search.classList.remove("hover");
 });
