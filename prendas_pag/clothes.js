@@ -434,6 +434,8 @@ let resultEmpy = document.querySelector(".resultEmpy");
 let resultText = document.querySelector(".resultText");
 let valueLinksProducuts = localStorage.getItem("value-links-products");
 const search_bar = document.querySelector(".search_bar");
+let input_search = document.querySelector(".input_search");
+let search = document.querySelector(".search");
 
 // functions
 
@@ -692,10 +694,22 @@ document.body.addEventListener("click", (e) => {
     };
 });
 
-resultSearchProduct.addEventListener("focus", ()=> {
-    search_bar.classList.add("hover");
+input_search.addEventListener("mouseover", ()=> {
+    formProducts.classList.add("hover");
+    search.classList.add("hover");
 });
 
-resultSearchProduct.addEventListener("blur", ()=> {
-    search_bar.classList.remove("hover");
+input_search.addEventListener("mouseout", ()=> {
+    formProducts.classList.remove("hover");
+    search.classList.remove("hover");
 });
+
+// input_search.addEventListener("focus", ()=> {
+//     formProducts.classList.add("hover");
+//     search.classList.add("hover");
+// });
+
+// input_search.addEventListener("blur", ()=> {
+//     formProducts.classList.remove("hover");
+//     search.classList.remove("hover");
+// });
